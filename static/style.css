@@ -14,6 +14,15 @@ body {
     visibility: hidden;
 }
 
+/* #belowMap {
+    position: relative;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    z-index: 1;
+    visibility: visible;
+} */
+
 #narration {
     position: absolute;
     width: 30vw;

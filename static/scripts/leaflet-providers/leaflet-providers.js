@@ -216,7 +216,7 @@
 			}
 		},
 		MapBox: {
-			url: '//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamJlcnRoZXQiLCJhIjoiY2plemdkZG05MGFxaTJxcWhvd2drcXoyMiJ9.4Kh8Nb-ZAPUnXEHERDrGsQ',
+			url: '//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={access_token}',
 			options: {
 				attribution:
 					'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; ' +
