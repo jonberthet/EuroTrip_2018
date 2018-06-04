@@ -279,52 +279,7 @@
     }
 
 
-    //HOTLINE
-    var hotlineLayer = L.hotline(coords, {
-      min: 150,
-      max: 350,
-      palette: {
-        0.0: '#008800',
-        0.5: '#ffff00',
-        1.0: '#ff0000'
-      },
-      weight: 5,
-      outlineColor: '#000000',
-      outlineWidth: 1
-    });
-    var bounds = hotlineLayer.getBounds();
 
-    // map.fitBounds(bounds);
-    hotlineLayer.bindPopup('Thanks for clicking.<br/>Play with me!').addTo(map);
-
-
-    ['weight', 'outlineWidth', 'min', 'max', 'smoothFactor'].forEach(function (value) {
-      document.getElementById(value).addEventListener('input', function () {
-        var style = {};
-        style[value] = parseInt(this.value, 10);
-        hotlineLayer.setStyle(style).redraw();
-      });
-    });
-
-    document.getElementById('outlineColor').addEventListener('input', function () {
-      hotlineLayer.setStyle({ 'outlineColor': this.value }).redraw();
-    });
-
-    var paletteColor1 = document.getElementById('paletteColor1');
-    var paletteColor2 = document.getElementById('paletteColor2');
-    var paletteColor3 = document.getElementById('paletteColor3');
-    [paletteColor1, paletteColor2, paletteColor3].forEach(function (element) {
-      element.addEventListener('input', updatePalette);
-    });
-    function updatePalette() {
-      hotlineLayer.setStyle({
-        'palette': {
-          0.0: paletteColor1.value,
-          0.5: paletteColor2.value,
-          1.0: paletteColor3.value
-        }
-      }).redraw();
-    }
 
   </script>
 
@@ -337,7 +292,7 @@
   <script type="text/javascript" src="static/scripts/constants.js"></script>
   <script type="text/javascript" src="static/scripts/jquery.csv.js"></script>
   <script type="text/javascript" src="static/scripts/procsv.js"></script>
-  <!-- <script type="text/javascript" src="static/scripts/storymap.js"></script> -->
+  <script type="text/javascript" src="static/scripts/storymap.js"></script>
 
 </body>
 </html>

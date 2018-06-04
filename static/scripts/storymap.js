@@ -157,21 +157,18 @@ $(window).on('load', function() {
         class: 'img-container'
       }).append(image);
 
-      var d3VizContainer = $('<div></div>', {
-        id: 'img-container' + i,
-        class: 'chapter-container'
-      }); 
-
-
-
+      // var d3VizContainer = $('<div></div>', {
+      //   id: 'img-container' + i,
+      //   class: 'chapter-container'
+      // }); 
 
       container
         .append('<p class="chapter-header">' + c['Chapter'] + '</p>')
         .append(imgContainer)
-        .append(d3VizContainer)
+        // .append(d3VizContainer)
         // .append('<div class="d3Viz">' + c['D3Code'] + '</div>')
         .append(source)
-        .append('<p class="description">' + c['Description'] + '</p>');
+        // .append('<p class="description">' + c['Description'] + '</p>');
         .append('<p class="description">' + c['Description'] + '</p>');
 
       $('#contents').append(container);
