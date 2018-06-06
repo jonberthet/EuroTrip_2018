@@ -20,13 +20,9 @@ def my_runs():
         for row in reader:
             runs.append(row["polyline"])
 
-    # return render_template("jsTests.html", runs = json.dumps(runs))
-
-    # return render_template("AllFeatures.html", runs = json.dumps(runs))
     return render_template("index.html", runs = json.dumps(runs))
-    # return render_template("AllFeatures_dev2.html", runs = json.dumps(runs))
 
 
 
 if __name__ == "__main__":
-    app.run(port = 5002)
+    app.run(port = 5001)

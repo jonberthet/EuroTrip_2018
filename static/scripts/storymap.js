@@ -1,3 +1,6 @@
+// https://docs.google.com/spreadsheets/d/1l5VtLRYqDwGKXC76J_lnsaMc6A58HxuxF5_vDlMX0cA/edit#gid=0
+// http://127.0.0.1:5002/#space-at-the-top
+
 $(window).on('load', function() {
   var documentSettings = {};
 
@@ -16,7 +19,7 @@ $(window).on('load', function() {
    var mapData;
 
    $.ajax({
-     url:'csv/Options.csv',
+     url:'static/csv/Options.csv',
      type:'HEAD',
      error: function() {
        // Options.csv does not exist, so use Tabletop to fetch data from
@@ -153,19 +156,21 @@ $(window).on('load', function() {
         class: 'chapter-container'
       });
 
+      var d3VizContainer = $('<div></div>', {
+        src: c['D3Code']
+      });
+
       var imgContainer = $('<div></div>', {
         class: 'img-container'
       }).append(image);
 
-      var d3VizContainer = $('<div></div>', {
-        class: 'img-container'
-      }).append(image);
+
 
       container
         .append('<p class="chapter-header">' + c['Chapter'] + '</p>')
         .append(imgContainer)
         .append(d3VizContainer)
-        .append('<div class="d3Viz"><script>' + c['D3Code'] + '</script></div>')
+        .append('<script>' + c['D3Code'] + '</script>')
         .append(source)
         .append('<p class="description">' + c['Description'] + '</p>');
 

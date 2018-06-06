@@ -25,7 +25,7 @@ body {
 
 #narration {
     position: absolute;
-    width: 30vw;
+    width: 40%;
     min-width: 300px;
     right: 0px;
     height: 100vh;
@@ -70,7 +70,7 @@ body {
     right: 0px;
     top: 0px;
     background-color: white;
-    width: 30vw;
+    width: 40%;
     min-width: 300px;
     z-index: 100;
     margin: 0px;
@@ -111,10 +111,19 @@ h3 {
     width: 100%;
 }
 
+.d3-container {
+    margin: 0px;
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    z-index: -1; position:relative;
+}
+
 .title-text {
     font-weight: bold;
     text-align: center;
     margin: 10px;
+    width: 40%;
 }
 
 .chapter-header {
@@ -170,7 +179,7 @@ h3 {
     margin-top: 10px;
   }
   #narration {
-    width: 80vw !important;
+    width: 60vw !important;
     min-width: 0;
     left: 10vw;
     background: none;
