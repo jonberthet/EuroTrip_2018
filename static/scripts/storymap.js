@@ -19,7 +19,7 @@ $(window).on('load', function() {
    var mapData;
 
    $.ajax({
-     url:'static/csv/Options.csv',
+     url:'csv/Options.csv',
      type:'HEAD',
      error: function() {
        // Options.csv does not exist, so use Tabletop to fetch data from

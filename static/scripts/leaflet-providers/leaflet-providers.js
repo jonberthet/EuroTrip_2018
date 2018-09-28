@@ -216,7 +216,7 @@
 			}
 		},
 		MapBox: {
-			url: '//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={access_token}',
+			url: '//api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamJlcnRoZXQiLCJhIjoiY2plemdkZG05MGFxaTJxcWhvd2drcXoyMiJ9.4Kh8Nb-ZAPUnXEHERDrGsQ',
 			options: {
 				attribution:
 					'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; ' +
@@ -405,8 +405,8 @@
 					'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
 				subdomains: '1234',
 				mapID: 'newest',
-				'app_id': '<insert your app_id here>',
-				'app_code': '<insert your app_code here>',
+				'app_id': 'en3qQ7qeQVwhLjxv5f0T',
+				'app_code': 'USSgHcjlvTMtxmdxj8jxCA',
 				base: 'base',
 				variant: 'normal.day',
 				maxZoom: 20,

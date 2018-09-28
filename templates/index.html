@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
-  <title>Leaflet Storymap with Google Sheets Template</title>
+  <title>JonB EuroTrip 2018</title>
 
   <!-- Load Leaflet from Cloudflare CDN, https not http.
        Latest release can be found on at http://leafletjs.com/download.html -->
@@ -42,7 +42,7 @@
   <!-- Include Leaflet.hotline -->
   <script src="static/node_modules/leaflet-hotline/demo/js/coords.js"></script>
   <script src="static/node_modules/leaflet-hotline/dist/leaflet.hotline.js"></script>
-  <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
 
 
   <!-- Hotline -->
@@ -76,6 +76,28 @@
     color: #666;
     font-size: 0.8em;
   }
+
+  rect {
+    /* margin-left: inherit;
+    margin-right: inherit; */
+    border-right: 10px;
+    border-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    fill: none;
+    /* background: #00ffff; */
+    pointer-events: all;
+    width: 1000px;
+    height: 1200px;
+  }
+
+  circle {
+    fill: #ffe500;
+    stroke-width: 5px;
+  }
+
+
+
 </style>
 
 
@@ -313,12 +335,56 @@
         [51.51, -0.047]
     ]).addTo(map);
 
+    //Portland Trail runs
+    //Polygon
+    var pdxrunpolygon = L.polygon([
+        [45.597361, -122.799226],
+        [45.569331, -122.784756],
+        [45.581582, -122.767082]
+    ]).addTo(map);
+
+
+    //FIREFOX APP
+    // create custom icon
+    var firefoxIcon = L.icon({
+        iconUrl: 'https://openclipart.org/image/2400px/svg_to_png/167043/beer.png',
+        iconSize: [20, 60], // size of the icon
+        popupAnchor: [0,-15]
+        });
+
+
+    var photoIcon = L.icon({
+        iconUrl: 'static/img/cameraIcon.svg',
+        iconSize: [60, 180], // size of the icon
+        popupAnchor: [0,-15]
+        });
+
+
+    // create popup contents
+    var customPopup = "I hear beer is good here<br/><img src='static/img/beers.jpg' alt='maptime logo gif' width='350px'/>";
+    var rideOne= "A quick break on a bridge<br/><img src='static/img/IMG_5287.jpg' alt='maptime logo gif' width='500px'/>";
+
+    // specify popup options
+    var customOptions =
+        {
+        'maxWidth': '500',
+        'className' : 'custom'
+        }
+
+    // create marker object, pass custom icon as option, pass content and options to popup, add to map
+    L.marker([34.410956, -119.858706], {icon: firefoxIcon}).bindPopup(customPopup,customOptions).addTo(map);
+    L.marker([45.5625, -122.7736], {icon: photoIcon}).bindPopup(rideOne,customOptions).addTo(map);
+
+    //FIREFOX END
+
+
     //POPUPS - click on marker, circle, or object to get words
 
     //Attach popup to marker
     marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
     circle.bindPopup("Jessie and I went on a date here.");
     polygon.bindPopup("I am a polygon.");
+    pdxrunpolygon.bindPopup("Running grounds - aka Deeogi Wild Grounds");
 
     //Standalone popups = new layer
     var popup = L.popup()

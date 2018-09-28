@@ -24,3 +24,4 @@ with open("runs.csv", "w") as runs_file:
                 polyline = r.json()["map"]["polyline"]
                 writer.writerow([activity["id"], polyline])
             page += 1
+    print("Grabbed Strava Data Successfully")
