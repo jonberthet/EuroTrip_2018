@@ -1,14 +1,18 @@
-# leaflet-storymaps-with-google-sheets
+# Travel blog with javascript, D3, and geotagged data integration
 Customize your Leaflet story map with linked Google Sheets template and scrolling narrative; now supports overlay
 
-## Live links (replace with your own)
-- Map https://jonberthet.github.io/leaflet-storymaps-with-google-sheets/
+## Live links
+- Map : http://52.27.206.96:8080/
 - Google Sheets template https://docs.google.com/spreadsheets/d/1l5VtLRYqDwGKXC76J_lnsaMc6A58HxuxF5_vDlMX0cA/edit?usp=sharing
 
-## Create your own
-- See step-by-step tutorial in *Data Visualization for All* http://www.datavizforall.org/leaflet/storymaps/
-
-### TO DO: review and clean up list below
+## How To: 
+- Clone this repo into your own repository
+- Create a Strava account and obtain an access token
+- Input the Strava access token into StravaAPI/getStravaData.py file
+- Go outside, have adventures, and track it with Strava
+- Run getStravaData.py to obtain Strava location data
+- Run application.py to launch the application within the browser.
+- Experiment mapping features by editing index.html or the google sheet for blog content.
 
 ## Credits (and licenses)
 Developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Trinity College CT, using a [Google Sheets](https://www.google.com/sheets/about/) template, with these open-source components:
